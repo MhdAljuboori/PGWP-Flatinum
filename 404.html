@@ -19,107 +19,7 @@
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
   </head>
   <body>
-    <style>
-      <php>
-          $dark_primary_backgroud_color = get_theme_mod( 'dark_primary_backgroud_color' );
-          $primary_backgroud_color = get_theme_mod( 'primary_backgroud_color' );
-          $btn_backgroud_color = get_theme_mod( 'btn_backgroud_color' );
-          $btn_hover_backgroud_color = get_theme_mod( 'btn_hover_backgroud_color' );
-          $btn_text_color = get_theme_mod( 'btn_text_color' );
-          $btn_text_hover_color = get_theme_mod( 'btn_text_hover_color' );
-          $social_link_color = get_theme_mod( 'social_link_color' );
-          $text_primary_color = get_theme_mod( 'text_primary_color' );
-          $primary_link_color = get_theme_mod( 'primary_link_color' );
-          $primary_link_hover_color = get_theme_mod( 'primary_link_hover_color' );
-      </php>
-      <php>
-        echo "
-          .navbar.navbar-inverse {
-              background-color: {$dark_primary_backgroud_color};
-          }
-
-          .jumbotron {
-              background-color: {$primary_backgroud_color};
-          }
-
-          .jumbotron {
-              color: {$text_primary_color};
-          }
-
-          .btn.btn-primary {
-              background-color: {$btn_backgroud_color};
-          }
-
-          .btn.btn-primary {
-              color: {$btn_text_color};
-          }
-
-          .btn.btn-primary:hover {
-              background-color: {$btn_hover_backgroud_color};
-          }
-
-          .btn.btn-primary:hover {
-              color: {$btn_text_hover_color};
-          }
-
-          #commentform input#submit,
-          input.search-submit {
-              background-color: {$btn_backgroud_color};
-          }
-
-          #commentform input#submit,
-          input.search-submit {
-              color: {$btn_text_color};
-          }
-
-          #commentform input#submit:hover,
-          input.search-submit:hover {
-              background-color: {$btn_hover_backgroud_color};
-          }
-
-          #commentform input#submit:hover,
-          input.search-submit:hover {
-              color: {$btn_text_hover_color};
-          }
-
-          .footer {
-              background-color: {$primary_backgroud_color};
-          }
-
-          .footer {
-              color: {$text_primary_color};
-          }
-
-          .footer a {
-              color: {$primary_link_color};
-          }
-
-          .footer a:hover {
-              color: {$primary_link_hover_color};
-          }
-
-          .copyright-footer {
-              background-color: {$dark_primary_backgroud_color};
-          }
-
-          .social-links a {
-              color: {$social_link_color};
-          }";
-        </php>
-    </style>
-    <div wp-cz-section="general_theme_customization" wp-cz-section-title="General Theme Customization" class="hidden">
-      <span wp-cz-control="dark_primary_backgroud_color" wp-cz-control-label="Dark Primary Background Color" wp-cz-control-type="color" wp-cz-control-section="general_theme_customization"></span>
-      <span wp-cz-control="primary_backgroud_color" wp-cz-control-label="Primary Background Color" wp-cz-control-type="color" wp-cz-control-section="general_theme_customization"></span>
-      <span wp-cz-control="text_primary_color" wp-cz-control-label="Text Primary Color" wp-cz-control-type="color" wp-cz-control-section="general_theme_customization"></span>
-      <span wp-cz-control="btn_backgroud_color" wp-cz-control-label="Button Background Color" wp-cz-control-type="color" wp-cz-control-section="general_theme_customization"></span>
-      <span wp-cz-control="btn_hover_backgroud_color" wp-cz-control-label="Button Hover Background Color" wp-cz-control-type="color" wp-cz-control-section="general_theme_customization"></span>
-      <span wp-cz-control="btn_text_color" wp-cz-control-label="Button Text Color" wp-cz-control-type="color" wp-cz-control-section="general_theme_customization"></span>
-      <span wp-cz-control="btn_text_hover_color" wp-cz-control-label="Button Text Hover Color" wp-cz-control-type="color" wp-cz-control-section="general_theme_customization"></span>
-      <span wp-cz-control="social_link_color" wp-cz-control-label="Social Link Color" wp-cz-control-type="color" wp-cz-control-section="general_theme_customization"></span>
-      <span wp-cz-control="primary_link_color" wp-cz-control-label="Primary Link Color" wp-cz-control-type="color" wp-cz-control-section="general_theme_customization"></span>
-      <span wp-cz-control="primary_link_hover_color" wp-cz-control-label="Primary Link Hover Color" wp-cz-control-type="color" wp-cz-control-section="general_theme_customization"></span>
-    </div>
-    <header wp-cz-section="header_section" wp-cz-section-title="Header Section">
+    <header >
       <nav class="navbar navbar-inverse" role="navigation">
         <div class="container-fluid">
           <div class="navbar-header">
@@ -163,9 +63,9 @@
       </nav>
       <div class="jumbotron">
         <div class="container">
-          <h1 wp-cz-control="header_title" wp-cz-control-label="Header Title" wp-cz-control-section="header_section" wp-cz-theme-mod="header_title" wp-cz-control-default="Simple Flat Theme">Simple Flat Theme</h1>
-          <p wp-cz-control="header_desc" wp-cz-control-label="header_describtion" wp-cz-control-section="header_section" wp-cz-control-default="This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information." wp-cz-theme-mod="header_desc">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
-          <p><a class="btn btn-primary btn-lg" wp-cz-control="header_btn_title" wp-cz-control-label="Header Button Title" wp-cz-control-default="Learn more" wp-cz-control-section="header_section" wp-cz-theme-mod="header_btn_title" wp-cz-theme-mod-check="true" href="/test" wp-cz-control-2="header_btn_href" wp-cz-control-label-2="Header Button Link" wp-cz-control-default-2="#" wp-cz-control-section-2="header_section" wp-cz-control-type-2="url" wp-cz-theme-mod-attr="header_btn_href" wp-cz-theme-mod-attr-set="href">Learn more</a></p>
+          <h1>Simple Flat Theme</h1>
+          <p>This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
+          <p><a class="btn btn-primary btn-lg">Learn more</a></p>
         </div>
       </div>
     </header>
@@ -179,7 +79,7 @@
     <footer class="">
       <div class="footer">
         <div class="container">
-          <div class="row" wp-register-sidebar="Footer Bar" wp-register-sidebar-id="footer_bar" wp-dynamic-sidebar="footer_bar" wp-register-sidebar-before="<div class=&quot;col-md-4&quot;>" wp-register-sidebar-after="</div>">
+          <div class="row">
             <div class="col-md-4">
               <h3 class="widgettitle">Meta</h3>
               <ul>
@@ -231,40 +131,40 @@
           </div>
         </div>
       </div>
-      <div class="copyright-footer" wp-cz-section="footer_section" wp-cz-section-title="Footer Section">
+      <div class="copyright-footer">
         <div class="container">
           <div class="row">
             <div class="col-md-7">
-              <p><span wp-cz-control="footer_company_name" wp-cz-control-label="Company Name" wp-cz-control-default="Company Name" wp-cz-control-section="footer_section" wp-cz-theme-mod="footer_company_name" wp-cz-theme-mod-check="true">Company Name</span> &copy; <span wp-call-function="echo date(&quot;Y&quot;)">2014</span></p>
+              <p><span>Company Name</span> &copy; <span wp-call-function="echo date(&quot;Y&quot;)">2014</span></p>
             </div>
             <div class="col-md-5">
               <ul class="social-links pull-right">
-                <li wp-cz-theme-mod-attr="footer_fb_link" wp-cz-theme-mod-check-attr="true">
-                  <a href="http://" wp-cz-control="footer_fb_link" wp-cz-control-label="Facebook Link" wp-cz-control-type="url" wp-cz-control-section="footer_section" wp-cz-theme-mod-attr="footer_fb_link" wp-cz-theme-mod-attr-set="href"><i class="fa fa-facebook-square"></i></a>
+                <li>
+                  <a href="http://"><i class="fa fa-facebook-square"></i></a>
                 </li>
-                <li wp-cz-theme-mod-attr="footer_tw_link" wp-cz-theme-mod-check-attr="true">
-                  <a href="http://" wp-cz-control="footer_tw_link" wp-cz-control-section="footer_section" wp-cz-control-type="url" wp-cz-control-label="Twitter Link" wp-cz-theme-mod-attr="footer_tw_link" wp-cz-theme-mod-attr-set="href"><i class="fa fa-twitter-square"></i></a>
+                <li>
+                  <a href="http://"><i class="fa fa-twitter-square"></i></a>
                 </li>
-                <li wp-cz-theme-mod-attr="footer_google_link" wp-cz-theme-mod-check-attr="true">
-                  <a href="http://" wp-cz-control="footer_google_link" wp-cz-control-label="Google Link" wp-cz-control-type="url" wp-cz-control-section="footer_section" wp-cz-theme-mod-attr="footer_google_link" wp-cz-theme-mod-attr-set="href"><i class="fa fa-google-plus-square"></i></a>
+                <li>
+                  <a href="http://"><i class="fa fa-google-plus-square"></i></a>
                 </li>
-                <li wp-cz-theme-mod-attr="footer_linkedin_link" wp-cz-theme-mod-check-attr="true">
-                  <a href="http://" wp-cz-control="footer_linkedin_link" wp-cz-control-label="LinkedIn Link" wp-cz-control-type="url" wp-cz-control-section="footer_section" wp-cz-theme-mod-attr="footer_linkedin_link" wp-cz-theme-mod-attr-set="href"><i class="fa fa-linkedin-square"></i></a>
+                <li>
+                  <a href="http://"><i class="fa fa-linkedin-square"></i></a>
                 </li>
-                <li wp-cz-theme-mod-attr="footer_vimo_link" wp-cz-theme-mod-check-attr="true">
-                  <a href="http://" wp-cz-theme-mod-attr="footer_vimo_link" wp-cz-theme-mod-attr-set="href" wp-cz-control="footer_vimo_link" wp-cz-control-label="Vimo Link" wp-cz-control-type="url" wp-cz-control-section="footer_section"><i class="fa fa-vimeo-square"></i></a>
+                <li>
+                  <a href="http://"><i class="fa fa-vimeo-square"></i></a>
                 </li>
-                <li wp-cz-theme-mod-attr="footer_pintrest_link" wp-cz-theme-mod-check-attr="true">
-                  <a href="http://" wp-cz-theme-mod-attr="footer_pintrest_link" wp-cz-theme-mod-attr-set="href" wp-cz-control="footer_pintrest_link" wp-cz-control-label="Pintrest Link" wp-cz-control-type="url" wp-cz-control-section="footer_section"><i class="fa fa-pinterest-square"></i></a>
+                <li>
+                  <a href="http://"><i class="fa fa-pinterest-square"></i></a>
                 </li>
-                <li wp-cz-theme-mod-attr="footer_youtube_link" wp-cz-theme-mod-check-attr="true">
-                  <a href="http://" wp-cz-theme-mod-attr="footer_youtube_link" wp-cz-theme-mod-attr-set="href" wp-cz-control="footer_youtube_link" wp-cz-control-label="Youtube Link" wp-cz-control-type="url" wp-cz-control-section="footer_section"><i class="fa fa-youtube-square"></i></a>
+                <li>
+                  <a href="http://"><i class="fa fa-youtube-square"></i></a>
                 </li>
-                <li wp-cz-theme-mod-attr="footer_instagram_link" wp-cz-theme-mod-check-attr="true">
-                  <a href="http://" wp-cz-control="footer_instagram_link" wp-cz-control-label="Instagram Link" wp-cz-control-type="url" wp-cz-control-section="footer_section" wp-cz-theme-mod-attr="footer_instagram_link" wp-cz-theme-mod-attr-set="href"><i class="fa fa-instagram"></i></a>
+                <li>
+                  <a href="http://"><i class="fa fa-instagram"></i></a>
                 </li>
-                <li wp-cz-theme-mod-attr="footer_behance_link" wp-cz-theme-mod-check-attr="true">
-                  <a href="http://" wp-cz-control="footer_behance_link" wp-cz-control-label="Behance Link" wp-cz-control-type="url" wp-cz-control-section="footer_section" wp-cz-theme-mod-attr="footer_behance_link" wp-cz-theme-mod-attr-set="href"><i class="fa fa-behance-square"></i></a>
+                <li>
+                  <a href="http://"><i class="fa fa-behance-square"></i></a>
                 </li>
               </ul>
             </div>
