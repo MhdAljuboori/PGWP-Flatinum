@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" wp-site wp-site-theme-name="ThemeTest" wp-site-theme-slug="theme_test" wp-site-themes-folder="/opt/lampp/htdocs/themes_blog/wp-content/themes/themetest" wp-site-master-page="index.html" wp-site-preview-url="http://localhost/themes_blog/?page_id=2">
+<html lang="en" wp-site wp-site-theme-name="Flatinum" wp-site-theme-slug="flatinum" wp-site-themes-folder="/opt/lampp/htdocs/themes_blog/wp-content/themes/flatinum" wp-site-master-page="index.html">
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -19,49 +19,149 @@
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
   </head>
   <body>
-    <header>
-      <nav class="navbar navbar-inverse" role="navigation"> 
-        <div class="container-fluid"> 
-          <div class="navbar-header"> 
-            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"> 
-              <span class="sr-only">Toggle navigation</span> 
-              <span class="icon-bar"></span> 
-              <span class="icon-bar"></span> 
-              <span class="icon-bar"></span> 
+    <style>
+      <php>
+          $dark_primary_backgroud_color = get_theme_mod( 'dark_primary_backgroud_color' );
+          $primary_backgroud_color = get_theme_mod( 'primary_backgroud_color' );
+          $btn_backgroud_color = get_theme_mod( 'btn_backgroud_color' );
+          $btn_hover_backgroud_color = get_theme_mod( 'btn_hover_backgroud_color' );
+          $btn_text_color = get_theme_mod( 'btn_text_color' );
+          $btn_text_hover_color = get_theme_mod( 'btn_text_hover_color' );
+          $social_link_color = get_theme_mod( 'social_link_color' );
+          $text_primary_color = get_theme_mod( 'text_primary_color' );
+          $primary_link_color = get_theme_mod( 'primary_link_color' );
+          $primary_link_hover_color = get_theme_mod( 'primary_link_hover_color' );
+      </php>
+      <php>
+        echo "
+          .navbar.navbar-inverse {
+              background-color: {$dark_primary_backgroud_color};
+          }
+
+          .jumbotron {
+              background-color: {$primary_backgroud_color};
+          }
+
+          .jumbotron {
+              color: {$text_primary_color};
+          }
+
+          .btn.btn-primary {
+              background-color: {$btn_backgroud_color};
+          }
+
+          .btn.btn-primary {
+              color: {$btn_text_color};
+          }
+
+          .btn.btn-primary:hover {
+              background-color: {$btn_hover_backgroud_color};
+          }
+
+          .btn.btn-primary:hover {
+              color: {$btn_text_hover_color};
+          }
+
+          #commentform input#submit,
+          input.search-submit {
+              background-color: {$btn_backgroud_color};
+          }
+
+          #commentform input#submit,
+          input.search-submit {
+              color: {$btn_text_color};
+          }
+
+          #commentform input#submit:hover,
+          input.search-submit:hover {
+              background-color: {$btn_hover_backgroud_color};
+          }
+
+          #commentform input#submit:hover,
+          input.search-submit:hover {
+              color: {$btn_text_hover_color};
+          }
+
+          .footer {
+              background-color: {$primary_backgroud_color};
+          }
+
+          .footer {
+              color: {$text_primary_color};
+          }
+
+          .footer a {
+              color: {$primary_link_color};
+          }
+
+          .footer a:hover {
+              color: {$primary_link_hover_color};
+          }
+
+          .copyright-footer {
+              background-color: {$dark_primary_backgroud_color};
+          }
+
+          .social-links a {
+              color: {$social_link_color};
+          }";
+        </php>
+    </style>
+    <div wp-cz-section="general_theme_customization" wp-cz-section-title="General Theme Customization" class="hidden">
+      <span wp-cz-control="dark_primary_backgroud_color" wp-cz-control-label="Dark Primary Background Color" wp-cz-control-type="color" wp-cz-control-section="general_theme_customization"></span>
+      <span wp-cz-control="primary_backgroud_color" wp-cz-control-label="Primary Background Color" wp-cz-control-type="color" wp-cz-control-section="general_theme_customization"></span>
+      <span wp-cz-control="text_primary_color" wp-cz-control-label="Text Primary Color" wp-cz-control-type="color" wp-cz-control-section="general_theme_customization"></span>
+      <span wp-cz-control="btn_backgroud_color" wp-cz-control-label="Button Background Color" wp-cz-control-type="color" wp-cz-control-section="general_theme_customization"></span>
+      <span wp-cz-control="btn_hover_backgroud_color" wp-cz-control-label="Button Hover Background Color" wp-cz-control-type="color" wp-cz-control-section="general_theme_customization"></span>
+      <span wp-cz-control="btn_text_color" wp-cz-control-label="Button Text Color" wp-cz-control-type="color" wp-cz-control-section="general_theme_customization"></span>
+      <span wp-cz-control="btn_text_hover_color" wp-cz-control-label="Button Text Hover Color" wp-cz-control-type="color" wp-cz-control-section="general_theme_customization"></span>
+      <span wp-cz-control="social_link_color" wp-cz-control-label="Social Link Color" wp-cz-control-type="color" wp-cz-control-section="general_theme_customization"></span>
+      <span wp-cz-control="primary_link_color" wp-cz-control-label="Primary Link Color" wp-cz-control-type="color" wp-cz-control-section="general_theme_customization"></span>
+      <span wp-cz-control="primary_link_hover_color" wp-cz-control-label="Primary Link Hover Color" wp-cz-control-type="color" wp-cz-control-section="general_theme_customization"></span>
+    </div>
+    <header wp-cz-section="header_section" wp-cz-section-title="Header Section">
+      <nav class="navbar navbar-inverse" role="navigation">
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="#" wp-site-name wp-the-site-url wp-the-site-url-set="href">Brand</a> 
+            <a class="navbar-brand" href="#" wp-site-name wp-the-site-url wp-the-site-url-set="href">Brand</a>
           </div>
-          <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1"> 
+          <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav navbar-right" wp-nav-menu="primary" wp-nav-menu-type="bootstrap">
               <li class="active">
                 <a href="#">Home</a>
               </li>
               <li>
                 <a href="#">About</a>
-              </li>               
-              <li class="dropdown"> 
-                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a> 
-                <ul class="dropdown-menu"> 
+              </li>
+              <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
+                <ul class="dropdown-menu">
                   <li>
                     <a href="#">Action</a>
-                  </li>                   
+                  </li>
                   <li>
                     <a href="#">Another action</a>
-                  </li>                   
+                  </li>
                   <li>
                     <a href="#">Something else here</a>
-                  </li>                   
-                  <li class="divider"></li>                   
+                  </li>
+                  <li class="divider"></li>
                   <li>
                     <a href="#">Separated link</a>
-                  </li>                   
-                </ul>                 
-              </li>               
-            </ul>             
-          </div>           
-        </div>         
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </div>
       </nav>
-      <div class="jumbotron" wp-cz-section="header_section" wp-cz-section-title="Header Section" wp-cz-control="header_bgd" wp-cz-control-label="Header Background" wp-cz-control-type="media" wp-cz-control-mime-type="audio" wp-cz-control-section="header_section" wp-attachment-bck wp-attachment-bck-theme-mod="header_bgd" wp-attachment-bck-size="large"> 
+      <div class="jumbotron">
         <div class="container">
           <h1 wp-cz-control="header_title" wp-cz-control-label="Header Title" wp-cz-control-section="header_section" wp-cz-theme-mod="header_title" wp-cz-control-default="Simple Flat Theme">Simple Flat Theme</h1>
           <p wp-cz-control="header_desc" wp-cz-control-label="header_describtion" wp-cz-control-section="header_section" wp-cz-control-default="This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information." wp-cz-theme-mod="header_desc">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
@@ -71,33 +171,33 @@
     </header>
     <main class="" wp-site-content>
       <div class="container">
-        <div class="col-md-12" wp-loop wp-loop-clear-columns> 
+        <div class="col-md-12" wp-loop wp-loop-clear-columns>
           <div class="thumbnail single-post">
-            <img src="file:///tmp/.org.chromium.Chromium.WvbwKT/placeholders/img4.jpg" wp-the-post-thumbnail="large" wp-the-post-thumbnail-if="true" /> 
-            <div class="caption"> 
-              <h1 wp-the-title>Sample Page</h1> 
+            <img src="file:///tmp/.org.chromium.Chromium.WvbwKT/placeholders/img4.jpg" wp-the-post-thumbnail="large" wp-the-post-thumbnail-if="true" />
+            <div class="caption">
+              <h1 wp-the-title>Sample Page</h1>
               <p wp-the-content wp-the-content-set="content"><div id="lipsum">
                   <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus tempor eros id ligula imperdiet dapibus. Suspendisse in mi vitae erat aliquam vestibulum a eget ligula. Curabitur porta nulla at vehicula rhoncus. Mauris ut ligula at risus pretium facilisis et a lectus. Mauris blandit urna quis felis sodales ultrices. Phasellus sit amet tempus libero. Praesent feugiat quis tortor eget rutrum. Nulla porta, felis eget maximus gravida, nunc felis interdum turpis, non vehicula orci nisi in est. Donec lorem turpis, convallis vel interdum vel, laoreet in justo. Cras elementum convallis sodales.</p>
                   <p>Donec eu fringilla leo, vitae laoreet urna. Nunc erat elit, laoreet at diam id, laoreet scelerisque sapien. Nunc malesuada tellus quam, ac tempor turpis accumsan eget. Suspendisse volutpat tincidunt leo, sollicitudin porttitor erat molestie ut. Pellentesque eu ligula nulla. Integer sit amet augue mauris. Phasellus vitae maximus nisi. Donec ut enim nec quam facilisis auctor nec vitae sapien. Phasellus mauris magna, pellentesque eget elit ac, tincidunt maximus turpis. Praesent metus odio, volutpat a leo ac, ullamcorper tincidunt urna. Cras pulvinar interdum rhoncus. Aliquam a facilisis velit, ut commodo ante.</p>
                   <p>In ac pulvinar risus. Quisque facilisis molestie est, at auctor mi ultrices id. Phasellus imperdiet justo sed nibh tristique ultrices. Suspendisse diam neque, tristique a hendrerit et, vestibulum at erat. Praesent fermentum congue orci, sed consectetur augue lobortis eu. Sed suscipit convallis massa ut iaculis. Curabitur pulvinar tortor fringilla facilisis porta. Curabitur vitae ultricies leo, eget venenatis enim. Morbi gravida velit sit amet sapien cursus posuere. Etiam id enim tellus. Mauris ut massa vel tellus viverra finibus. Praesent non consequat urna. Maecenas ut odio vitae justo aliquam gravida at at sem. Nam elementum non neque et efficitur.</p>
                   <p>Etiam finibus viverra malesuada. Mauris laoreet volutpat felis id gravida. Curabitur aliquet urna ligula, sed molestie augue convallis in. In dignissim, ante a ultrices venenatis, tellus nunc porta dui, quis eleifend leo ipsum nec nunc. Fusce eu justo sed lorem vehicula molestie. Proin convallis vulputate lorem, eu consectetur enim consectetur at. Nullam ullamcorper pulvinar mauris, et accumsan neque egestas sed. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Quisque fermentum, ante vel molestie vestibulum, quam diam porta arcu, sed suscipit risus justo ut nisi. Nunc luctus, sapien finibus malesuada mattis, risus libero lobortis libero, ut commodo ante lorem vitae nibh. Suspendisse ex diam, auctor sit amet molestie non, luctus eget purus.</p>
                   <p>Fusce ultricies pretium viverra. Nunc cursus, libero eu bibendum accumsan, lectus ex vehicula risus, ac consequat tellus urna ut odio. Duis varius orci egestas lobortis congue. Maecenas ac sagittis nisl. Morbi venenatis ultrices enim sit amet consequat. Donec quis fringilla diam. Duis eget placerat magna. Ut malesuada ipsum ipsum, eu rutrum ex mattis in. Donec vulputate magna nec ligula finibus, nec elementum arcu ultricies. Aliquam at lectus ornare nunc aliquet sollicitudin. Maecenas tristique justo a luctus dignissim. Nam interdum enim leo, sit amet condimentum tortor pharetra vitae. Nunc nibh est, ornare nec risus ac, dignissim facilisis velit. Quisque bibendum rutrum eros, et semper lectus congue ut. Suspendisse laoreet cursus feugiat. Aliquam bibendum justo ligula, in gravida justo placerat ut.</p>
-                </div>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p> 
-            </div>             
-          </div>           
+                </div>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+            </div>
+          </div>
         </div>
       </div>
     </main>
-    <footer>
+    <footer class="">
       <div class="footer">
         <div class="container">
           <div class="row" wp-register-sidebar="Footer Bar" wp-register-sidebar-id="footer_bar" wp-dynamic-sidebar="footer_bar" wp-register-sidebar-before="<div class=&quot;col-md-4&quot;>" wp-register-sidebar-after="</div>">
             <div class="col-md-4">
-              <h3 class="widgettitle">Meta</h3> 
+              <h3 class="widgettitle">Meta</h3>
               <ul>
                 <li>
                   <a href="http://localhost/themes_blog/wp-admin/">Site Admin</a>
-                </li>                 
+                </li>
                 <li>
                   <a href="http://localhost/themes_blog/wp-login.php?action=logout&amp;_wpnonce=c7175b4c75">Log out</a>
                 </li>
@@ -109,11 +209,11 @@
                 </li>
                 <li>
                   <a href="https://wordpress.org/" title="Powered by WordPress, state-of-the-art semantic personal publishing platform.">WordPress.org</a>
-                </li>                 
+                </li>
               </ul>
             </div>
-            <div class="col-md-4"> 
-              <h3 class="widgettitle">Recent Posts</h3> 
+            <div class="col-md-4">
+              <h3 class="widgettitle">Recent Posts</h3>
               <ul>
                 <li>
                   <a href="http://localhost/themes_blog/?p=18">Sed in condimentum mauris</a>
@@ -133,7 +233,7 @@
               </ul>
             </div>
             <div class="col-md-4">
-              <h3 class="widgettitle">Archives</h3> 
+              <h3 class="widgettitle">Archives</h3>
               <ul>
                 <li>
                   <a href="http://localhost/themes_blog/?m=201507">July 2015</a>
@@ -146,8 +246,8 @@
       <div class="copyright-footer" wp-cz-section="footer_section" wp-cz-section-title="Footer Section">
         <div class="container">
           <div class="row">
-            <div class="col-md-7"> 
-              <p><span wp-cz-control="footer_company_name" wp-cz-control-label="Company Name" wp-cz-control-default="Company Name" wp-cz-control-section="footer_section" wp-cz-theme-mod="footer_company_name" wp-cz-theme-mod-check="true">Company Name</span> &copy; <span wp-call-function="echo date(&quot;Y&quot;)">2014</span></p> 
+            <div class="col-md-7">
+              <p><span wp-cz-control="footer_company_name" wp-cz-control-label="Company Name" wp-cz-control-default="Company Name" wp-cz-control-section="footer_section" wp-cz-theme-mod="footer_company_name" wp-cz-theme-mod-check="true">Company Name</span> &copy; <span wp-call-function="echo date(&quot;Y&quot;)">2014</span></p>
             </div>
             <div class="col-md-5">
               <ul class="social-links pull-right">
@@ -178,7 +278,7 @@
                 <li wp-cz-theme-mod-attr="footer_behance_link" wp-cz-theme-mod-check-attr="true">
                   <a href="http://" wp-cz-control="footer_behance_link" wp-cz-control-label="Behance Link" wp-cz-control-type="url" wp-cz-control-section="footer_section" wp-cz-theme-mod-attr="footer_behance_link" wp-cz-theme-mod-attr-set="href"><i class="fa fa-behance-square"></i></a>
                 </li>
-              </ul>               
+              </ul>
             </div>
           </div>
         </div>

@@ -1,5 +1,20 @@
 
 
+/*
+Theme Name: Flatinum
+Theme URI: http://flatinum.mhdaljuboori.me
+Author: Mohammed Al-Juboori
+Author URI: http://mhdaljuboori.me/
+Description: Flat fully customizable WordPress theme.
+Version: 1.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Tags: black, blue, gray, pink, purple, white, yellow, dark, light, one-column, footer-sidebar, responsive-layout, custom-colors, custom-header, custom-menu, featured-images, threaded-comments
+Text Domain: flatinum
+
+This theme is licensed under the GPL.
+*/
+
 .navbar
 {
     margin-bottom: 0;
@@ -58,6 +73,11 @@
 {
     background-color: #ebebeb;
 }
+
+.navbar-inverse .navbar-nav > .active > a, .navbar-inverse .navbar-nav > .active > a:hover, .navbar-inverse .navbar-nav > .active > a:focus {
+	background-color: transparent;
+}
+
 
 .navbar-inverse .navbar-nav > .open > a, .navbar-inverse .navbar-nav > .open > a:hover, .navbar-inverse .navbar-nav > .open > a:focus
 {
@@ -193,7 +213,6 @@ input.search-submit
 {
     color: #fff;
     background-color: #337ab7;
-    border-color: #2e6da4;
 }
 
 #commentform input#submit:hover,
@@ -201,7 +220,6 @@ input.search-submit:hover
 {
     color: #fff;
     background-color: #286090;
-    border-color: #204d74;
 }
 
 .social-links
@@ -217,11 +235,12 @@ input.search-submit:hover
 .social-links > li > a
 {
     font-size: 30px;
+    opacity: 0.7;
 }
 
 .social-links > li > a:hover
 {
-    color: #7AC1FF;
+    opacity: 1;
 }
 
 input[type="text"],
@@ -247,5 +266,25 @@ input[type="search"]
 {
     font-style: italic;
     color: rgb(189, 52, 52);
+}
+
+.page-not-found
+{
+    margin-bottom: 50px;
+}
+
+.page-not-found > h1
+{
+    font-size: 50px;
+}
+
+.page-not-found > h3
+{
+    font-size: 35px;
+}
+
+.page-not-found > p
+{
+    font-size: 20px;
 }
 
